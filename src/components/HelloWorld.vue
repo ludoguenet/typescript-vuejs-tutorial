@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="item in items"
+    v-for="item in props.items"
   >
     <span
       v-text="item.name"
@@ -15,17 +15,9 @@
 </template>
 
 <script setup lang="ts">
-  import {ref} from "vue";
   import type User from "@/types/User";
 
-  const items = ref<User[]>([
-    {
-      name: "Nord",
-      age: 18
-    },
-    {
-      name: "Coders",
-      age: 81
-    }
-  ]);
+  const props = defineProps<{
+    items: User[],
+  }>();
 </script>
