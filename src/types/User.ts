@@ -1,6 +1,6 @@
-interface User {
+interface UserProperty {
     name: string,
     age: string | number,
 }
 
-export default User;
+export default UserProperty;
